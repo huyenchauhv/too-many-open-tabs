@@ -27,7 +27,7 @@ const posts = Object.entries({
     }
   ),
 
-}).map(([path, content]) => {
+}).map(([path, content]: [string, any]) => {
 
   const slug = path
     .split("/")
@@ -47,6 +47,17 @@ const posts = Object.entries({
   };
 
 });
+
+const publishedPosts = posts.filter(
+  (post: any) => {
+
+    const isDraft =
+      /draft:\s*true/.test(post.content);
+
+    return !isDraft;
+
+  }
+);
 ---
 
 <BaseLayout>
@@ -73,7 +84,7 @@ const posts = Object.entries({
 
     <div id="results">
 
-      {posts.map((post: any) => {
+      {publishedPosts.map((post: any) => {
 
   return (
 
@@ -111,7 +122,7 @@ const posts = Object.entries({
   input.addEventListener("input", (e) => {
 
     const value =
-      e.target.value.toLowerCase();
+  e.target.value.toLowerCase();
 
     items.forEach((item) => {
 

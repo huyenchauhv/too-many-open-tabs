@@ -21,7 +21,7 @@ The strange inability to fully begin anything. Attention becoming viscous. Openi
 
 Summer here often feels less like a season and more like low-level atmospheric interference.
 
-Even language changes texture in this weather. Emails become shorter. Conversations flatten. Thoughts arrive slower and dissolve faster. Entire afternoons disappear into heat management strategies: iced coffee, cold showers, rearranged working hours, lying motionless under weak electric fans pretending to read theory PDFs.
+Even language changes texture in this weather. Emails become shorter. Conversations flatten. Thoughts arrive slower and dissolve faster. Entire afternoons disappear into heat management strategies: iced coffee, cold showers, rearranged working hours, lying motionless under weak electric fans pretending to read.
 
 There is also something oddly lonely about tropical exhaustion because it rarely looks cinematic.
 
