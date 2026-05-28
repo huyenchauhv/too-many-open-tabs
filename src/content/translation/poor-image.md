@@ -1,6 +1,11 @@
 ---
-title: "In Defense of Poor Image"
+title: "In Defense of Poor Image - Hito Steyerl"
 date: "2026-05-14"
+excerpt: "Hình ảnh nghèo là một bản sao đang lưu động..."
+tags:
+  - cinema
+  - archive
+  - theory
 ---
 
 Hình ảnh nghèo là một bản sao đang lưu động. Chất lượng thấp, độ phân giải dưới tiêu chuẩn; càng lưu thông nhanh, nó càng trở nên xuống cấp. Nó là bóng ma của một hình ảnh, một bản xem trước, một thumbnail, một ý niệm lang bạt, một hình ảnh lưu động được phân phối miễn phí, bị vắt ép qua những kết nối kỹ thuật số chậm chạp, bị nén, tái sản xuất, rip[^1], remix, cũng như bị sao-dán sang những kênh phân phối khác.

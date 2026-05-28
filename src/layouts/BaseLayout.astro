@@ -29,5 +29,43 @@ import "../styles/global.css";
     <main class="site-container">
       <slot />
     </main>
+
+    <script is:inline>
+
+  const savedLang =
+    localStorage.getItem("lang");
+
+  if (savedLang === "en") {
+    document.body.classList.add("en");
+  }
+
+</script>
+
+<script is:inline>
+
+  const toggle =
+    document.getElementById(
+      "lang-toggle"
+    );
+
+  toggle?.addEventListener(
+    "click",
+    () => {
+
+      const isEnglish =
+        document.body.classList.toggle(
+          "en"
+        );
+
+      localStorage.setItem(
+        "lang",
+        isEnglish ? "en" : "bi"
+      );
+
+    }
+  );
+
+</script>
+
   </body>
 </html>

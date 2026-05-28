@@ -1,0 +1,134 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const allPosts = Object.values({
+
+  ...import.meta.glob("/src/content/journal/*.md", {
+    eager: true,
+  }),
+
+  ...import.meta.glob("/src/content/translation/*.md", {
+    eager: true,
+  }),
+
+  ...import.meta.glob("/src/content/notes/*.md", {
+    eager: true,
+  }),
+
+});
+
+export async function getStaticPaths() {
+
+  const posts = Object.values({
+
+    ...import.meta.glob("/src/content/journal/*.md", {
+      eager: true,
+    }),
+
+    ...import.meta.glob("/src/content/translation/*.md", {
+      eager: true,
+    }),
+
+    ...import.meta.glob("/src/content/notes/*.md", {
+      eager: true,
+    }),
+
+  });
+
+  const tags = new Set<string>();
+
+  posts.forEach((post: any) => {
+
+    const postTags =
+      post.frontmatter.tags || [];
+
+    postTags.forEach((tag: string) => {
+      tags.add(tag);
+    });
+
+  });
+
+  return Array.from(tags).map((tag) => {
+
+    return {
+      params: { tag },
+    };
+
+  });
+
+}
+
+const { tag } = Astro.params;
+
+const posts = allPosts.filter((post: any) => {
+
+  return (
+    post.frontmatter.tags &&
+    post.frontmatter.tags.includes(tag)
+  );
+
+});
+
+function formatDate(date: string) {
+
+  const d = new Date(date);
+
+  const day = String(d.getDate()).padStart(2, "0");
+  const month = String(d.getMonth() + 1).padStart(2, "0");
+  const year = String(d.getFullYear()).slice(-2);
+
+  return `${day}.${month}.${year}`;
+}
+
+function getSlug(post: any) {
+
+  return post.file
+    .split("/")
+    .pop()
+    .replace(".md", "");
+
+}
+---
+
+<BaseLayout>
+
+  <main class="archive-page">
+
+    <div class="archive-top">
+
+      <a href="/">
+        too many open tabs
+      </a>
+
+      <div>
+        #{tag}
+      </div>
+
+    </div>
+
+    <div class="archive-list">
+
+      {posts.map((post: any) => (
+
+        <a
+          class="archive-item"
+          href={`/posts/${getSlug(post)}`}
+        >
+
+          <span class="archive-date">
+            {formatDate(post.frontmatter.date)}
+          </span>
+
+          <span class="archive-title">
+            {post.frontmatter.title}
+          </span>
+
+        </a>
+
+      ))}
+
+    </div>
+
+  </main>
+
+</BaseLayout>

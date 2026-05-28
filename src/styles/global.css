@@ -461,6 +461,67 @@ a:hover {
   gap: 1rem;
 }
 
+.article-pagination a {
+  text-decoration: none;
+
+  font-size: 18px;
+}
+
+.archive-excerpt {
+  margin-top: 0.4rem;
+
+  font-size: 12px;
+  line-height: 1.6;
+
+  opacity: 0.6;
+
+  max-width: 480px;
+}
+
+.article-tags {
+  display: flex;
+  gap: 1rem;
+
+  margin-top: 1rem;
+  margin-bottom: 4rem;
+
+  font-size: 12px;
+}
+
+.article-tags a {
+  text-decoration: none;
+  opacity: 0.6;
+}
+
+.label-en {
+  display: none;
+}
+
+body.en .label-bi {
+  display: none;
+}
+
+body.en .label-en {
+  display: inline;
+}
+
+#lang-toggle {
+  background: none;
+  border: none;
+
+  padding: 0;
+
+  font: inherit;
+  font-size: 14px;
+
+  cursor: pointer;
+
+}
+
+#lang-toggle:hover {
+  opacity: 1;
+}
+
 @media (max-width: 768px) {
 
   .hero-grid,

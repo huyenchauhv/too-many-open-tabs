@@ -55,6 +55,15 @@ function getCategory(post: any) {
 
   return "notes";
 }
+
+function getExcerpt(post: any) {
+
+  if (post.frontmatter.excerpt) {
+    return post.frontmatter.excerpt;
+  }
+
+  return "";
+}
 ---
 
 <BaseLayout>
@@ -95,11 +104,15 @@ function getCategory(post: any) {
 
             <span class="archive-title">
 
-              [{getCategory(post)}]
+  [{getCategory(post)}]
 
-              {post.frontmatter.title}
+  {post.frontmatter.title}
 
-            </span>
+  <div class="archive-excerpt">
+    {getExcerpt(post)}
+  </div>
+
+</span>
 
           </a>
 

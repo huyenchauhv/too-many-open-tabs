@@ -25,14 +25,19 @@ const posts = [
   ...notesPosts,
 ];
 
-posts.sort((a: any, b: any) => {
+const publishedPosts = posts.filter(
+  (post: any) => !post.frontmatter.draft
+);
+
+publishedPosts.sort((a: any, b: any) => {
   return (
     new Date(b.frontmatter.date).getTime() -
     new Date(a.frontmatter.date).getTime()
   );
 });
 
-const latestPosts = posts.slice(0, 3);
+const latestPosts =
+  publishedPosts.slice(0, 3);
 
 function formatDate(date: string) {
   const d = new Date(date);
@@ -68,9 +73,20 @@ function getCategory(post: any) {
     </div>
 
     <nav class="nav">
-      <a href="/about">About</a>
-      <a href="/search">⌕</a>
-    </nav>
+
+  <button id="lang-toggle">
+    EN
+  </button>
+
+  <a href="/about">
+    About
+  </a>
+
+  <a href="/search">
+    ⌕
+  </a>
+
+</nav>
 
   </header>
 
@@ -118,12 +134,69 @@ function getCategory(post: any) {
         <h2>INDEX / MỤC LỤC</h2>
 
         <ul>
-          <li><a href="/all-posts">all posts / tất cả</a></li>
-          <li><a href="/journal">journal / nhật ký</a></li>
-          <li><a href="/translation">translation / dịch lậu</a></li>
-          <li><a href="/notes">notes / ghi chép</a></li>
-          <li><a href="/">bookmarks / để dành</a></li>
-        </ul>
+
+  <li>
+    <a href="/all-posts">
+    </a>
+  </li>
+
+  <li>
+    <a href="/journal">
+
+      <span class="label-bi">
+        journal / nhật ký
+      </span>
+
+      <span class="label-en">
+        journal
+      </span>
+
+    </a>
+  </li>
+
+  <li>
+    <a href="/translation">
+
+      <span class="label-bi">
+        translation / dịch lậu
+      </span>
+
+      <span class="label-en">
+        translation
+      </span>
+
+    </a>
+  </li>
+
+  <li>
+    <a href="/notes">
+
+      <span class="label-bi">
+        notes / ghi chép
+      </span>
+
+      <span class="label-en">
+        notes
+      </span>
+
+    </a>
+  </li>
+
+  <li>
+    <a href="/">
+
+      <span class="label-bi">
+        bookmarks / để dành
+      </span>
+
+      <span class="label-en">
+        bookmarks
+      </span>
+
+    </a>
+  </li>
+
+</ul>
 
       </div>
 
