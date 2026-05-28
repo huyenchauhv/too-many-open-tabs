@@ -25,7 +25,11 @@ const posts = [
   ...notesPosts,
 ];
 
-posts.sort((a: any, b: any) => {
+const publishedPosts = posts.filter(
+  (post: any) => !post.frontmatter.draft
+);
+
+publishedPosts.sort((a: any, b: any) => {
   return (
     new Date(b.frontmatter.date).getTime() -
     new Date(a.frontmatter.date).getTime()
@@ -84,7 +88,7 @@ function getExcerpt(post: any) {
 
     <div class="archive-list">
 
-      {posts.map((post: any) => {
+      {publishedPosts.map((post: any) => {
 
         const slug = post.file
           .split("/")
