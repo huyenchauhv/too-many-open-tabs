@@ -40,4 +40,6 @@ Dĩ nhiên, sự phát triển này gắn liền với sự cực đoan hoá the
 
 Hiện tại, có ít nhất hai mươi torrent các phim tiểu luận của Chris Marker tồn tại trực tuyến. Nếu muốn xem một chương trình hồi cố, bạn hoàn toàn có thể tự tổ chức lấy. Nhưng nền kinh tế của hình ảnh nghèo không chỉ xoay quanh việc tải xuống: bạn có thể giữ các file đó, xem lại chúng, thậm chí tái biên tập hoặc cải thiện chúng nếu thấy cần thiết. Và những phiên bản mới ấy lại tiếp tục lưu hành. Những file AVI nhoè mờ của những kiệt tác gần như đã bị lãng quên được trao đổi trên các nền tảng P2P tương đối kín. Những video điện thoại quay lén được tuồn ra khỏi bảo tàng được phát tán công khai trên YouTube. DVD từ các viewing copy của nghệ sĩ được đem trao đổi. Nhiều tác phẩm điện ảnh avant-garde, phim tiểu luận và phim phi thương mại đã được phục sinh như những hình ảnh nghèo. Dù họ có muốn hay không.
 
+[to be cont]
+
 [^1]: Footnote here.
