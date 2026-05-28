@@ -1,17 +1,231 @@
 ---
+import BaseLayout from "../layouts/BaseLayout.astro";
 
+const journalPosts = Object.values(
+  import.meta.glob("/src/content/journal/*.md", {
+    eager: true,
+  })
+);
+
+const translationPosts = Object.values(
+  import.meta.glob("/src/content/translation/*.md", {
+    eager: true,
+  })
+);
+
+const notesPosts = Object.values(
+  import.meta.glob("/src/content/notes/*.md", {
+    eager: true,
+  })
+);
+
+const posts = [
+  ...journalPosts,
+  ...translationPosts,
+  ...notesPosts,
+];
+
+posts.sort((a: any, b: any) => {
+  return (
+    new Date(b.frontmatter.date).getTime() -
+    new Date(a.frontmatter.date).getTime()
+  );
+});
+
+const latestPosts = posts.slice(0, 3);
+
+function formatDate(date: string) {
+  const d = new Date(date);
+
+  const day = String(d.getDate()).padStart(2, "0");
+  const month = String(d.getMonth() + 1).padStart(2, "0");
+  const year = String(d.getFullYear()).slice(-2);
+
+  return `${day}.${month}.${year}`;
+}
+
+function getCategory(post: any) {
+
+  if (post.file.includes("/journal/")) {
+    return "journal";
+  }
+
+  if (post.file.includes("/translation/")) {
+    return "translation";
+  }
+
+  return "notes";
+}
 ---
+<BaseLayout>
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+  <!-- HEADER -->
+
+  <header class="topbar">
+
+    <div class="logo">
+      too many open tabs
+    </div>
+
+    <nav class="nav">
+      <a href="/about">About</a>
+      <a href="/search">⌕</a>
+    </nav>
+
+  </header>
+
+  <!-- HERO -->
+
+  <section class="hero-grid two-column-grid">
+
+    <div class="hero-left">
+
+      <div class="small-line"></div>
+
+      <p>
+        too many open tabs<br />
+        not enough braincells
+      </p>
+
+    </div>
+
+    <div class="hero-right">
+
+      <h1>
+        Somewhere between<br />
+        a personal website<br />
+        and an overgrown Google document.
+      </h1>
+
+    </div>
+
+  </section>
+
+  <!-- CONTENT -->
+
+  <section class="content-grid">
+
+    <!-- ROW 1 -->
+
+    <div class="content-row two-column-grid">
+
+      <!-- LEFT -->
+
+      <div class="section-block">
+
+        <div class="small-line"></div>
+
+        <h2>INDEX / MỤC LỤC</h2>
+
+        <ul>
+          <li><a href="/all-posts">all posts / tất cả</a></li>
+          <li><a href="/journal">journal / nhật ký</a></li>
+          <li><a href="/translation">translation / dịch lậu</a></li>
+          <li><a href="/notes">notes / ghi chép</a></li>
+          <li><a href="/">bookmarks / để dành</a></li>
+        </ul>
+
+      </div>
+
+      <!-- RIGHT -->
+
+      <div class="section-block">
+
+        <div class="section-heading">
+          <span>—</span>
+          <h2>LATEST / MỚI NHẤT</h2>
+        </div>
+
+        <div class="post-list">
+
+          {latestPosts.map((post: any) => (
+
+            <a
+  class="post-item"
+  href={`/posts/${
+    post.file.split("/").pop().replace(".md", "")
+  }`}
+>
+              <span class="date">
+                {formatDate(post.frontmatter.date)}
+              </span>
+
+              <span class="title">
+                [{getCategory(post)}]
+                {post.frontmatter.title}
+              </span>
+
+            </a>
+
+          ))}
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- ROW 2 -->
+
+    <div class="content-row two-column-grid">
+
+      <!-- LEFT -->
+
+      <div class="section-block">
+
+        <div class="small-line"></div>
+
+        <p>
+          for personal<br />
+          circulation only<br />
+          chỉ lưu hành<br />
+          nội bộ
+        </p>
+
+      </div>
+
+      <!-- RIGHT -->
+
+      <div class="section-block">
+
+        <div class="section-heading">
+          <span>—</span>
+          <h2>RECENT NOTES</h2>
+        </div>
+
+        <ul class="notes-list">
+          <li>↳ Screenshots from nowhere</li>
+          <li>↳ Ghi nhớ tháng 6</li>
+          <li>↳ Từ vựng quý III</li>
+          <li>...</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer class="footer two-column-grid">
+
+    <div class="footer-left">
+      ©2026
+    </div>
+
+    <div class="footer-right">
+
+      <a href="/">
+        ↑ Back to top
+      </a>
+
+      <div>
+        Built with too many open tabs.
+      </div>
+
+    </div>
+
+  </footer>
+
+</BaseLayout>

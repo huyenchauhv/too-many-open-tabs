@@ -1,0 +1,114 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const journalPosts = Object.values(
+  import.meta.glob("/src/content/journal/*.md", {
+    eager: true,
+  })
+);
+
+const translationPosts = Object.values(
+  import.meta.glob("/src/content/translation/*.md", {
+    eager: true,
+  })
+);
+
+const notesPosts = Object.values(
+  import.meta.glob("/src/content/notes/*.md", {
+    eager: true,
+  })
+);
+
+const posts = [
+  ...journalPosts,
+  ...translationPosts,
+  ...notesPosts,
+];
+
+posts.sort((a: any, b: any) => {
+  return (
+    new Date(b.frontmatter.date).getTime() -
+    new Date(a.frontmatter.date).getTime()
+  );
+});
+
+function formatDate(date: string) {
+
+  const d = new Date(date);
+
+  const day = String(d.getDate()).padStart(2, "0");
+  const month = String(d.getMonth() + 1).padStart(2, "0");
+  const year = String(d.getFullYear()).slice(-2);
+
+  return `${day}.${month}.${year}`;
+}
+
+function getCategory(post: any) {
+
+  if (post.file.includes("/journal/")) {
+    return "journal";
+  }
+
+  if (post.file.includes("/translation/")) {
+    return "translation";
+  }
+
+  return "notes";
+}
+---
+
+<BaseLayout>
+
+  <main class="archive-page">
+
+    <div class="archive-top">
+
+      <a href="/">
+        too many open tabs
+      </a>
+
+      <div>
+        all posts / tất cả
+      </div>
+
+    </div>
+
+    <div class="archive-list">
+
+      {posts.map((post: any) => {
+
+        const slug = post.file
+          .split("/")
+          .pop()
+          .replace(".md", "");
+
+        return (
+
+          <a
+            class="archive-item"
+            href={`/posts/${slug}`}
+          >
+
+            <span class="archive-date">
+              {formatDate(post.frontmatter.date)}
+            </span>
+
+            <span class="archive-title">
+
+              [{getCategory(post)}]
+
+              {post.frontmatter.title}
+
+            </span>
+
+          </a>
+
+        );
+
+      })}
+
+    </div>
+
+  </main>
+
+</BaseLayout>

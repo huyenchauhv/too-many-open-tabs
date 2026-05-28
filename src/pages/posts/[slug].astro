@@ -1,0 +1,122 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+export async function getStaticPaths() {
+
+  return Object.values({
+
+  ...import.meta.glob("/src/content/journal/*.md", {
+    eager: true,
+  }),
+
+  ...import.meta.glob("/src/content/translation/*.md", {
+    eager: true,
+  }),
+
+  ...import.meta.glob("/src/content/notes/*.md", {
+    eager: true,
+  }),
+
+})
+
+  .map((post: any) => {
+
+    const slug = post.file
+      .split("/")
+      .pop()
+      .replace(".md", "");
+
+    return {
+      params: { slug },
+      props: { post },
+    };
+
+  });
+
+}
+
+const { post } = Astro.props;
+
+const {
+  title,
+  date,
+} = post.frontmatter;
+
+function formatDate(date: string) {
+
+  const d = new Date(date);
+
+  const day = String(d.getDate()).padStart(2, "0");
+  const month = String(d.getMonth() + 1).padStart(2, "0");
+  const year = String(d.getFullYear()).slice(-2);
+
+  return `${day}.${month}.${year}`;
+}
+
+const Content = post.default;
+
+function getCategory(post: any) {
+
+  if (post.file.includes("/journal/")) {
+    return "journal";
+  }
+
+  if (post.file.includes("/translation/")) {
+    return "translation";
+  }
+
+  return "notes";
+}
+---
+
+<BaseLayout>
+
+  <main class="article-page">
+
+    <div class="article-topbar">
+
+      <a href="/">
+        too many open tabs
+      </a>
+
+      <a href="/">
+        index
+      </a>
+
+    </div>
+
+    <article>
+
+      <div class="article-meta">
+
+        <span>
+          {formatDate(date)}
+        </span>
+
+        <span>
+          / {getCategory(post)}
+        </span>
+
+      </div>
+
+      <h1>
+        {title}
+      </h1>
+
+      <div class="article-content">
+        <Content />
+      </div>
+
+    </article>
+
+    <footer class="article-footer">
+
+      <a href="/">
+        ↑ Back to archive
+      </a>
+
+    </footer>
+
+  </main>
+
+</BaseLayout>

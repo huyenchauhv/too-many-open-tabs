@@ -1,0 +1,136 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const posts = Object.entries({
+
+  ...import.meta.glob(
+    "/src/content/journal/*.md",
+    {
+      eager: true,
+      as: "raw",
+    }
+  ),
+
+  ...import.meta.glob(
+    "/src/content/translation/*.md",
+    {
+      eager: true,
+      as: "raw",
+    }
+  ),
+
+  ...import.meta.glob(
+    "/src/content/notes/*.md",
+    {
+      eager: true,
+      as: "raw",
+    }
+  ),
+
+}).map(([path, content]) => {
+
+  const slug = path
+    .split("/")
+    .pop()
+    .replace(".md", "");
+
+  const titleMatch =
+    content.match(/title:\s*"(.+)"/);
+
+  const title =
+    titleMatch?.[1] || slug;
+
+  return {
+    slug,
+    title,
+    content,
+  };
+
+});
+---
+
+<BaseLayout>
+
+  <main class="search-page">
+
+    <div class="search-topbar">
+
+      <a href="/">
+        too many open tabs
+      </a>
+
+      <a href="/">
+        index
+      </a>
+
+    </div>
+
+    <input
+      id="search-input"
+      type="text"
+      placeholder="search..."
+    />
+
+    <div id="results">
+
+      {posts.map((post: any) => {
+
+  return (
+
+    <a
+      class="search-item"
+      href={`/posts/${post.slug}`}
+      data-title={post.title.toLowerCase()}
+      data-content={post.content.toLowerCase()}
+    >
+
+      {post.title}
+
+    </a>
+
+  );
+
+})}
+
+    </div>
+
+  </main>
+
+<script is:inline>
+
+  const input =
+    document.getElementById(
+      "search-input"
+    );
+
+  const items =
+    document.querySelectorAll(
+      ".search-item"
+    );
+
+  input.addEventListener("input", (e) => {
+
+    const value =
+      e.target.value.toLowerCase();
+
+    items.forEach((item) => {
+
+      const title =
+        item.dataset.title || "";
+
+      const content =
+        item.dataset.content || "";
+
+      item.style.display =
+        title.includes(value) ||
+        content.includes(value)
+          ? "block"
+          : "none";
+
+    });
+
+  });
+
+</script>
+
+</BaseLayout>
