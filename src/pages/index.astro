@@ -19,10 +19,20 @@ const notesPosts = Object.values(
   })
 );
 
+const bookmarksPosts = Object.values(
+  import.meta.glob(
+    "/src/content/bookmarks/*.md",
+    {
+      eager: true,
+    }
+  )
+);
+
 const posts = [
   ...journalPosts,
   ...translationPosts,
   ...notesPosts,
+  ...bookmarksPosts,
 ];
 
 const publishedPosts = posts.filter(
@@ -37,7 +47,7 @@ publishedPosts.sort((a: any, b: any) => {
 });
 
 const latestPosts =
-  publishedPosts.slice(0, 3);
+  publishedPosts.slice(0, 5);
 
 function formatDate(date: string) {
   const d = new Date(date);
@@ -59,8 +69,13 @@ function getCategory(post: any) {
     return "translation / dịch lậu";
   }
 
+  if (post.file.includes("/bookmarks/")) {
+    return "bookmarks / đánh dấu";
+  }
+
   return "notes / ghi chép";
 }
+
 ---
 <BaseLayout>
 
@@ -152,6 +167,12 @@ function getCategory(post: any) {
   <li>
     <a href="/notes">
   notes / ghi chép
+</a>
+  </li>
+
+  <li>
+    <a href="/bookmarks">
+  bookmarks / đánh dấu
 </a>
   </li>
 

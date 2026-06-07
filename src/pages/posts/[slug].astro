@@ -17,6 +17,10 @@ export async function getStaticPaths() {
     eager: true,
   }),
 
+   ...import.meta.glob("/src/content/bookmarks/*.md", {
+    eager: true,
+  }),
+
 })
 
   .map((post: any) => {

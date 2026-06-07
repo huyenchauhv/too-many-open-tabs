@@ -303,7 +303,11 @@ a:hover {
 }
 
 .article-content img {
-  width: 100%;
+  display: block;
+
+  margin-left: auto;
+  margin-right: auto;
+
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
@@ -346,6 +350,7 @@ a:hover {
 
   font-size: 12px;
   opacity: 0.7;
+  text-align: center;
 }
 
 .article-content hr {
@@ -491,6 +496,18 @@ a:hover {
 .article-tags a {
   text-decoration: none;
   opacity: 0.6;
+}
+
+.footnotes li {
+  margin-bottom: 0.5rem;
+}
+
+.footnotes ol {
+  gap: 0.5rem;
+}
+
+.footnotes p {
+  margin-bottom: 0;
 }
 
 @media (max-width: 768px) {

@@ -1,6 +1,7 @@
 ---
 title: "Seasonal Depression, But Tropical"
 date: "2026-05-28"
+draft: true
 ---
 
 I used to think seasonal depression belonged to countries with actual winters.
