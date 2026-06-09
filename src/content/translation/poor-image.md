@@ -8,7 +8,7 @@ tags:
   - theory
 ---
 
-*Dịch từ: Hito Steyerl. "In Defense of the Poor Image."*  
+*Dịch từ: [Steyerl. "In Defense of the Poor Image."](https://www.e-flux.com/journal/10/61362/in-defense-of-the-poor-imageHito)*
 *e-flux journal, no. 10, November 2009.*  
 *Dịch sang tiếng Việt và chú thích: Châu.*
 
@@ -114,7 +114,7 @@ Hình ảnh nghèo không còn nói về thứ đích thực ấy nữa—cái b
 
 Tóm lại: nó nói về thực tại.
 
-[^1]: Wretched of the Screen (Những Kẻ Khốn Khổ của Màn Hình): Cụm từ do Hito Steyerl sử dụng như một sự gợi nhắc đến The Wretched of the Earth (1961) của Frantz Fanon, tác phẩm kinh điển về chủ nghĩa thực dân, giải thực dân và đấu tranh giải phóng.
+[^1]: ND: Wretched of the Screen (Những Kẻ Khốn Khổ của Màn Hình): Cụm từ do Hito Steyerl sử dụng như một sự gợi nhắc đến The Wretched of the Earth (1961) của Frantz Fanon, tác phẩm kinh điển về chủ nghĩa thực dân, giải thực dân và đấu tranh giải phóng.
 [^2]:Deconstructing Harry, đạo diễn: Woody Allen (1997).
 [^3]:“Wer Gemälde wirklich sehen will, geht ja schließlich auch ins Museum,” Frankfurter Allgemeine Zeitung, ngày 14 tháng 6 năm 2007. Cuộc trò chuyện giữa Harun Farocki và Alexander Horwath.
 [^4]:Bài viết xuất sắc của Sven Lütticken, “Viewing Copies: On the Mobility of Moving Images,” đăng trên e-flux journal, số 8 (tháng 5 năm 2009), đã giúp tôi chú ý đến khía cạnh này của hình ảnh nghèo.
@@ -122,7 +122,7 @@ Tóm lại: nó nói về thực tại.
 [^6]:Dĩ nhiên, trong một số trường hợp, những hình ảnh có độ phân giải thấp cũng xuất hiện trong môi trường truyền thông chính thống (chủ yếu là tin tức), nơi chúng gắn liền với tính khẩn cấp, tính tức thời và thảm họa, đồng thời có giá trị rất lớn. Xem thêm: Hito Steyerl, “Documentary Uncertainty,” A Prior 15 (2007).
 [^7]:Hito Steyerl, “Politics of the Archive: Translations in Film,” Transversal (tháng 3 năm 2008).
 [^8]:Theo trao đổi thư điện tử với tác giả.
-[^9]:Điện ảnh Thứ ba là trào lưu điện ảnh chính trị xuất hiện tại Mỹ Latinh cuối thập niên 1960, đối lập với cả điện ảnh Hollywood (First Cinema) lẫn điện ảnh tác giả châu Âu (Second Cinema). Nguồn: 
+[^9]:ND: Điện ảnh Thứ ba là trào lưu điện ảnh chính trị xuất hiện tại Mỹ Latinh cuối thập niên 1960, đối lập với cả điện ảnh Hollywood (First Cinema) lẫn điện ảnh tác giả châu Âu (Second Cinema). 
 [^10]:Julio García Espinosa, “For an Imperfect Cinema,” bản dịch của Julianne Burton, Jump Cut, số 20 (1979): 24–26.
 [^11]:Xem Paolo Virno, A Grammar of the Multitude (Cambridge, MA: MIT Press, 2004).
 [^12]:Xem Alexander Alberro, Conceptual Art and the Politics of Publicity (Cambridge, MA: MIT Press, 2003).
@@ -133,7 +133,7 @@ Tóm lại: nó nói về thực tại.
 [^17]:Thậm chí The Pirate Bay từng có ý định mua nền tảng dầu khí ngoài khơi mang quy chế ngoài lãnh thổ của Principality of Sealand để đặt máy chủ tại đó. Xem Jan Libbenga, “The Pirate Bay plans to buy Sealand,” The Register, ngày 12 tháng 1 năm 2007.
 [^18]:Dziga Vertov, “Kinopravda and Radiopravda,” trong Kino-Eye: The Writings of Dziga Vertov (Berkeley: University of California Press, 1995), tr. 52.
 [^19]:Vertov, “Kinopravda and Radiopravda,” tr. 52.
-[^20]:Khái niệm chỉ ngôn ngữ nguyên sơ được cho là Adam sử dụng trước sự kiện Tháp Babel trong truyền thống Do Thái–Kitô giáo; thường được hiểu như một ngôn ngữ phổ quát, chưa bị phân mảnh và có mối quan hệ trực tiếp với sự vật.
-[^21]:Phong trào chính trị và văn hóa quốc tế xuất hiện từ thập niên 1960, liên kết các phong trào giải phóng ở châu Á, châu Phi và Mỹ Latinh nhằm chống chủ nghĩa thực dân và đế quốc.
+[^20]:ND: Khái niệm chỉ ngôn ngữ nguyên sơ được cho là Adam sử dụng trước sự kiện Tháp Babel trong truyền thống Do Thái–Kitô giáo; thường được hiểu như một ngôn ngữ phổ quát, chưa bị phân mảnh và có mối quan hệ trực tiếp với sự vật.
+[^21]:ND: Phong trào chính trị và văn hóa quốc tế xuất hiện từ thập niên 1960, liên kết các phong trào giải phóng ở châu Á, châu Phi và Mỹ Latinh nhằm chống chủ nghĩa thực dân và đế quốc.
 [^22]:Vertov, “Kinopravda and Radiopravda,” tr. 52.
 [^23]:Ít nhất là từ góc nhìn của một ảo tưởng hoài niệm.
