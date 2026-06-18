@@ -7,9 +7,6 @@ tags:
   - criticism
   - theory
 ---
-Bài tập luyện cơ chậm nhiều năm trước vừa dịch vừa khóc. 
-
-Sau đây là phần I 
 
 *Dịch từ: Patrick Flores. "Difficult Comparisons:
 The Curatorial Desire for Southeast Asia
@@ -17,9 +14,13 @@ The Curatorial Desire for Southeast Asia
 
 *2018.*  
 
-<div style="height: 4rem;"></div>
 
-Phần I, II, III
+
+Bài tập luyện cơ chậm nhiều năm trước vừa dịch vừa khóc. 
+
+Sau đây là phần I, II, III 
+
+<div style="height: 4rem;"></div>
 
 <img
   class="left"
