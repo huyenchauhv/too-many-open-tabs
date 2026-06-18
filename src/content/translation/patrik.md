@@ -1,7 +1,7 @@
 ---
-title: "Những So Sánh Nan Giải: Khát Vọng Giám Tuyển Đối Với Đông Nam Á - Patrick Flores"
+title: "Những So Sánh Nan Giải: Khát Vọng Giám Tuyển Đối Với Đông Nam Á - Patrick Flores (I))"
 date: "2026-05-14"
-excerpt: "Hình ảnh nghèo là một bản sao đang lưu động..."
+excerpt: "Trong nỗ lực giám tuyển Đông Nam Á, người giám tuyển thực hiện những phép so sánh..."
 tags:
   - art
   - criticism
