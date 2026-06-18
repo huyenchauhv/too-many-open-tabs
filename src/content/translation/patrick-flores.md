@@ -1,5 +1,5 @@
 ---
-title: "Những so sánh nan giải: khát vọng giám tuyển Đông Nam Á - Patrick Flores (I))"
+title: "Những so sánh nan giải: khát vọng giám tuyển Đông Nam Á - Patrick Flores (I)"
 date: "2026-05-14"
 excerpt: "Trong nỗ lực giám tuyển Đông Nam Á, người giám tuyển thực hiện những phép so sánh..."
 tags:
@@ -8,7 +8,7 @@ tags:
   - theory
 ---
 
-*Dịch từ: Patrick Flores. "Difficult Comparisons:
+*Dịch từ: Patrick Flores, "Difficult Comparisons:
 The Curatorial Desire for Southeast Asia
 ", 2018.*  
 
