@@ -1,5 +1,5 @@
 ---
-title: "Những So Sánh Nan Giải: Khát Vọng Giám Tuyển Đối Với Đông Nam Á - Patrick Flores (I))"
+title: "Những so sánh nan giải: khát vọng giám tuyển Đông Nam Á - Patrick Flores (I))"
 date: "2026-05-14"
 excerpt: "Trong nỗ lực giám tuyển Đông Nam Á, người giám tuyển thực hiện những phép so sánh..."
 tags:
@@ -7,6 +7,8 @@ tags:
   - criticism
   - theory
 ---
+Bài tập luyện cơ cậm nhiều năm trước vừa dịch vừa khóc. 
+Sau đây là phần I 
 
 *Dịch từ: [Patrick Flores. "Difficult Comparisons:
 The Curatorial Desire for Southeast Asia
@@ -17,7 +19,7 @@ The Curatorial Desire for Southeast Asia
 
 Phần I, II, III
 
-![title](/images/pf.png)
+![title](/images/Pf.png)
 
 Trong nỗ lực giám tuyển Đông Nam Á, người giám tuyển thực hiện những phép so sánh. Họ lần theo các chi tiết của sự tương hợp và dị biệt, của khoảng cách và sự mật thiết với đối tượng hoặc chất liệu. Tuy nhiên, trong cuộc chơi giám tuyển, những điều kiện cũng như hệ quả của việc so sánh thường bị bỏ qua. Có lẽ bởi ngay từ đầu người ta đã mặc định khu vực này như một tập thể đã hoàn toàn thành hình; và vì thế, điều duy nhất còn lại cần làm là nhận diện và nắm bắt nó trong một tình huống giám tuyển, để cuối cùng gọi tên nó như một triển lãm về Đông Nam Á.
 
