@@ -10,9 +10,7 @@ tags:
 
 *Dịch từ: Patrick Flores. "Difficult Comparisons:
 The Curatorial Desire for Southeast Asia
-"*
-
-*2018.*  
+", 2018.*  
 
 
 
