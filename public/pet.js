@@ -992,9 +992,9 @@ setInterval(() => {
 
       const spots = [
 
-  { x: 70, y: 82 },
-  { x: 120, y: 85 },
-  { x: 170, y: 82 }
+{ x: 70, y: 70 },
+{ x: 120, y: 73 },
+{ x: 170, y: 70 }
 
 ];
       const spot =
