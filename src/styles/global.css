@@ -522,6 +522,378 @@ a:hover {
   margin-bottom: 0;
 }
 
+#chau-pet {
+  margin-top: 2rem;
+
+  border: 1px solid black;
+
+  padding: 1rem;
+
+  max-width: 240px;
+}
+
+.xp-bar {
+
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+
+  height: 8px;
+
+  border: 1px solid #111;
+
+  overflow: hidden;
+
+}
+
+#xp-fill {
+
+  height: 100%;
+
+  background:
+    repeating-linear-gradient(
+      90deg,
+      #111 0,
+      #111 8px,
+      transparent 8px,
+      transparent 10px
+    );
+
+  width: 0%;
+
+}
+
+
+.pet-playground {
+
+  position: relative;
+
+  height: 120px;
+
+  margin-top: 1rem;
+
+}
+
+
+#pet-sprite.pet-evolving {
+
+  animation:
+    evolveShake 0.08s linear infinite !important;
+
+}
+
+@keyframes evolveShake {
+
+  0% {
+    transform:
+      translate(-4px,-2px);
+  }
+
+  25% {
+    transform:
+      translate(4px,2px);
+  }
+
+  50% {
+    transform:
+      translate(-4px,2px);
+  }
+
+  75% {
+    transform:
+      translate(4px,-2px);
+  }
+
+  100% {
+    transform:
+      translate(-4px,-2px);
+  }
+
+}
+
+#pet-sprite.pet-rebooting {
+
+  animation:
+    rebootShake
+    0.05s
+    linear
+    infinite
+    !important;
+
+}
+
+@keyframes rebootShake {
+
+  0% {
+    transform:
+      translate(-2px,-1px);
+  }
+
+  25% {
+    transform:
+      translate(2px,1px);
+  }
+
+  50% {
+    transform:
+      translate(-2px,1px);
+  }
+
+  75% {
+    transform:
+      translate(2px,-1px);
+  }
+
+  100% {
+    transform:
+      translate(-2px,-1px);
+  }
+
+}
+
+#pet-poop {
+
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  opacity: 0;
+
+  pointer-events: none;
+
+}
+
+
+.coffee {
+
+  top: 8px;
+  right: 10px;
+
+}
+
+.books {
+
+  bottom: 8px;
+  left: 8px;
+
+}
+
+.laptop {
+
+  bottom: 8px;
+  right: 10px;
+
+}
+
+.pet-name {
+  margin-bottom: 0.15rem;
+}
+
+#pet-age {
+
+  margin-bottom: 0.25rem;
+
+  font-size: 11px;
+  opacity: 0.45;
+
+}
+
+#pet-mood {
+  margin-bottom: 1rem;
+
+  opacity: 0.7;
+}
+
+#pet-thought {
+
+  min-height: 1rem;
+
+  margin-top: 0.15rem;
+  margin-bottom: 0.4rem;
+
+  font-size: 11px;
+
+  color: #0a05a6;
+
+  transition:
+    opacity 0.4s ease;
+
+}
+
+#pet-thought.show {
+
+  opacity: 1;
+
+}
+
+#pet-status {
+
+  height: 1rem;
+
+  margin-top: 1rem;
+
+  font-size: 0.75rem;
+
+  color: #448244;
+
+}
+
+.pet-row {
+
+  position: absolute;
+
+  left: 60;
+  top: 80;
+
+  display: flex;
+  align-items: center;
+
+  gap: 0.35rem;
+
+  transition:
+    left 1s ease,
+    top 1s ease;
+
+}
+
+.pet-actions {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, max-content);
+
+  gap: 0.5rem;
+
+  margin-top: 1rem;
+
+}
+
+#pet-action {
+
+  font-size: 18px;
+  min-width: 24px;
+
+  opacity: 0;
+
+  transition: opacity 0.2s ease;
+
+}
+
+#pet-action.show {
+
+  opacity: 1;
+
+}
+
+.pet-actions button {
+  background: transparent;
+  border: 1px solid black;
+
+  padding: 0.15rem 0.5rem;
+
+  font-size: 12px;
+
+  font: inherit;
+
+  cursor: pointer;
+}
+
+#pet-stage {
+
+  font-size: 11px;
+
+  opacity: 0.55;
+
+  margin-bottom: 0.5rem;
+
+}
+
+#pet-status {
+  margin-top: 1rem;
+
+  opacity: 0.6;
+
+  font-size: 11px;
+}
+
+#pet-sprite {
+
+  white-space: nowrap;
+
+  display: inline-block;
+
+  font-size: 24px;
+
+  line-height: 1;
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  transition:
+    transform 0.2s ease;
+
+}
+
+#pet-sprite {
+
+  animation:
+    idle 2s ease-in-out infinite;
+
+}
+
+
+.pet-bounce {
+
+  transform: translateY(-4px);
+
+}
+
+.pet-walking {
+
+  animation:
+    walk 0.4s ease-in-out infinite;
+
+}
+
+@keyframes walk {
+
+  0% {
+    transform:
+      translateY(0px);
+  }
+
+  50% {
+    transform:
+      translateY(-4px);
+  }
+
+  100% {
+    transform:
+      translateY(0px);
+  }
+
+}
+
+@keyframes idle {
+
+  0% {
+    transform:
+      translateY(0px);
+  }
+
+  50% {
+    transform:
+      translateY(-3px);
+  }
+
+  100% {
+    transform:
+      translateY(0px);
+  }
+
+}
+
 @media (max-width: 768px) {
 
   .hero-grid,

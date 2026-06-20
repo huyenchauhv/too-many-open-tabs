@@ -228,15 +228,83 @@ function getCategory(post: any) {
 
         <div class="small-line"></div>
 
-        <p>
-          for personal<br />
-          circulation only<br />
-          chỉ lưu hành<br />
-          nội bộ
-        </p>
+        
+        <div id="chau-pet">
 
+  <div class="pet-name">
+    châu.exe
+  </div>
+
+  <div class="pet-meta">
+
+  <div id="pet-stage">
+    small creature
+  </div>
+
+  <div id="pet-thought">
+</div>
+
+</div>
+
+<div class="xp-bar">
+
+  <div
+    id="xp-fill"
+    class="xp-fill">
+  </div>
+
+</div>
+
+  <div class="pet-playground">
+
+    <div id="pet-poop"></div>
+
+    <div class="pet-row">
+
+      <div id="pet-sprite">
+        (＾▽＾)
       </div>
 
+      <div id="pet-action"></div>
+
+
+    </div>
+
+  </div>
+
+
+  <div class="pet-actions">
+
+    <button onclick="feedPet()">
+      feed
+    </button>
+
+    <button onclick="coffeePet()">
+      coffee
+    </button>
+
+    <button onclick="bathPet()">
+      bath
+    </button>
+
+    <button onclick="sleepPet()">
+      sleep
+    </button>
+
+    <button onclick="petPet()">
+      pet
+    </button>
+
+    <button onclick="resetPet()">
+  reset
+</button>
+
+  </div>
+
+  <div id="pet-status"></div>
+
+</div>
+</div>
       <!-- RIGHT -->
 
       <div class="section-block">
@@ -280,5 +348,7 @@ function getCategory(post: any) {
     </div>
 
   </footer>
+
+<script type="module" src="/src/scripts/pet.js"></script>
 
 </BaseLayout>
