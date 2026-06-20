@@ -6,7 +6,7 @@ let mood = "happy";
 let poop = false;
 
 let petX = 60;
-let petY = 35;
+let petY = 5;
 
 let poopX = 0;
 let poopY = 0;
@@ -719,10 +719,10 @@ petX =
 
 petY =
   Math.max(
-    30,
+    10,
     Math.min(
       petY,
-      45
+      35
     )
   );
 
@@ -992,13 +992,11 @@ setInterval(() => {
 
       const spots = [
 
-        { x: 30, y: 75 },
-        { x: 80, y: 85 },
-        { x: 140, y: 80 },
-        { x: 190, y: 90 }
+  { x: 70, y: 82 },
+  { x: 120, y: 85 },
+  { x: 170, y: 82 }
 
-      ];
-
+];
       const spot =
         spots[
           Math.floor(

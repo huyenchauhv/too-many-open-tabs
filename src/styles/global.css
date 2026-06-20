@@ -537,11 +537,13 @@ a:hover {
   margin-top: 0.5rem;
   margin-bottom: 2rem;
 
-  height: 8px;
+  height: 6px;
 
   border: 1px solid #111;
 
   overflow: hidden;
+
+  width: 100%;
 
 }
 
@@ -553,26 +555,43 @@ a:hover {
     repeating-linear-gradient(
       90deg,
       #111 0,
-      #111 8px,
-      transparent 8px,
-      transparent 10px
+      #111 6px,
+      transparent 6px,
+      transparent 8px
     );
 
   width: 0%;
 
 }
 
-
 .pet-playground {
 
   position: relative;
 
-  height: 120px;
+  height: 90px;
 
   margin-top: 1rem;
 
 }
 
+.pet-playground::after {
+
+  content: ",,,,,,,,,,,,,,,,,,,,,,,,,,,";
+
+  position: absolute;
+
+  color: #077b18;
+
+  opacity: 0.45;
+
+  left: 0;
+right: 0;
+
+text-align: center;
+
+  bottom: -8px;
+
+}
 
 #pet-sprite.pet-evolving {
 
@@ -650,6 +669,7 @@ a:hover {
 
 }
 
+
 #pet-poop {
 
   position: absolute;
@@ -706,14 +726,17 @@ a:hover {
 
 #pet-thought {
 
-  min-height: 1rem;
 
   margin-top: 0.15rem;
   margin-bottom: 0.4rem;
 
-  font-size: 11px;
+  font-size: 0.5rem;
 
-  color: #0a05a6;
+  font-style: italic;
+
+  min-height: 1.5rem;
+
+  color: #66604f;
 
   transition:
     opacity 0.4s ease;
@@ -767,6 +790,11 @@ a:hover {
 
   margin-top: 1rem;
 
+  width: 100%;
+
+  justify-content: space-between;
+
+
 }
 
 #pet-action {
@@ -777,6 +805,8 @@ a:hover {
   opacity: 0;
 
   transition: opacity 0.2s ease;
+
+  margin-left: 0.5rem;
 
 }
 
@@ -806,6 +836,14 @@ a:hover {
   opacity: 0.55;
 
   margin-bottom: 0.5rem;
+
+  color: #8a8474;
+
+}
+
+#pet-stage::before {
+
+  content: "status: ";
 
 }
 
