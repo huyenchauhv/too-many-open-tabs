@@ -1,6 +1,6 @@
 ---
 title: "Những so sánh nan giải: khát vọng giám tuyển Đông Nam Á - Patrick Flores (II)"
-date: "2026-05-14"
+date: "2026-06-23"
 excerpt: "Trong nỗ lực giám tuyển Đông Nam Á, người giám tuyển thực hiện những phép so sánh..."
 tags:
   - art

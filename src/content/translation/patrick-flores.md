@@ -1,6 +1,6 @@
 ---
 title: "Những so sánh nan giải: khát vọng giám tuyển Đông Nam Á - Patrick Flores (I)"
-date: "2026-05-14"
+date: "2026-06-20"
 excerpt: "Trong nỗ lực giám tuyển Đông Nam Á, người giám tuyển thực hiện những phép so sánh..."
 tags:
   - art
@@ -16,7 +16,7 @@ The Curatorial Desire for Southeast Asia
 
 Bài tập luyện cơ chậm nhiều năm trước vừa dịch vừa khóc. 
 
-Sau đây là phần I, II, III 
+Sau đây là phần [I](https://too-many-open-tabs.vercel.app/posts/patrick-flores), [II](https://too-many-open-tabs.vercel.app/posts/patrick-flores-2)
 
 <div style="height: 4rem;"></div>
 
