@@ -609,8 +609,6 @@ function updateDecor() {
   const stage =
     getStage();
 
-  const layout =
-  getDecorLayout();
 
   const items = {
 
@@ -703,33 +701,6 @@ items[stage].forEach(
 
 }
 
-function getDecorLayout() {
-
-  let layout =
-    JSON.parse(
-      localStorage.getItem(
-        "chauDecor"
-      )
-    );
-
-  if (layout)
-    return layout;
-
-  layout =
-    [...decorSpots]
-      .sort(
-        () =>
-          Math.random() - 0.5
-      );
-
-  localStorage.setItem(
-    "chauDecor",
-    JSON.stringify(layout)
-  );
-
-  return layout;
-
-}
 
 function updateGrass() {
 
