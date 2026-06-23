@@ -522,6 +522,38 @@ a:hover {
   margin-bottom: 0;
 }
 
+/*pet*/
+
+.pet-header {
+
+  padding: 1rem;
+
+  border-bottom:
+    1px solid #444;
+  
+  padding-bottom: 0.5rem;
+
+}
+
+.pet-world {
+
+  position: relative;
+  height: 150px;
+
+  overflow: hidden;
+
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+
+  border-bottom: 1px solid #444;
+
+}
+
+.pet-controls {
+padding: 0.5rem 1rem 1rem;
+
+}
+
 #chau-pet {
   margin-top: 2rem;
 
@@ -535,7 +567,7 @@ a:hover {
 .xp-bar {
 
   margin-top: 0.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
 
   height: 6px;
 
@@ -568,30 +600,10 @@ a:hover {
 
   position: relative;
 
-  height: 90px;
-
-  margin-top: 1rem;
+  height: 100%;
 
 }
 
-.pet-playground::after {
-
-  content: ",,,,,,,,,,,,,,,,,,,,,,,,,,,";
-
-  position: absolute;
-
-  color: #077b18;
-
-  opacity: 0.45;
-
-  left: 0;
-right: 0;
-
-text-align: center;
-
-  bottom: 0px;
-
-}
 
 #pet-sprite.pet-evolving {
 
@@ -766,7 +778,7 @@ text-align: center;
   position: absolute;
 
   left: 60px;
-  top: 80px;
+  top: 35px;
 
   display: flex;
   align-items: center;
@@ -779,6 +791,51 @@ text-align: center;
 
 }
 
+#pet-decor {
+
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+}
+
+.decor-item {
+
+  position: absolute;
+
+  font-size: 16px;
+
+  opacity: 0.8;
+
+}
+
+#pet-grass {
+
+  position: absolute;
+
+  
+  left: 0;
+  right: 0;
+
+
+  bottom: 6px;
+
+  text-align: center;
+
+  color: #77aa66;
+
+  opacity: 0.7;
+
+  pointer-events: none;
+
+  font-size: 12px;
+
+  line-height: 1;
+
+}
+
 .pet-actions {
 
   display: grid;
@@ -788,7 +845,7 @@ text-align: center;
 
   gap: 0.5rem;
 
-  margin-top: 1rem;
+  margin-top: 0;
 
   width: 100%;
 
@@ -865,8 +922,8 @@ text-align: center;
 
   line-height: 1;
 
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 0px;
+  margin-bottom: 0spx;
 
   transition:
     transform 0.2s ease;

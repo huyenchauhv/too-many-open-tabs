@@ -6,7 +6,7 @@ let mood = "happy";
 let poop = false;
 
 let petX = 60;
-let petY = 5;
+let petY = 45;
 
 let poopX = 0;
 let poopY = 0;
@@ -199,6 +199,7 @@ const petMessages = [
 ];
 
 //*HELPERS*//
+
 
 function evolveToStage(
   stage
@@ -573,6 +574,198 @@ function temporaryFace(
 
 //*RENDER*//
 
+const leftSpots = [
+
+  { x: 15, y: 10 },
+  { x: 30, y: 55 },
+  { x: 55, y: 70 }
+
+];
+
+const rightSpots = [
+
+  { x: 165, y: 25 },
+  { x: 195, y: 55 },
+  { x: 165, y: 80 }
+
+];
+
+const groundSpots = [
+
+  { x: 40, y: 80 },
+  { x: 126, y: 90 },
+  { x: 80, y: 82 }
+
+];
+
+function updateDecor() {
+
+  const decor =
+    getEl("pet-decor");
+
+  if (!decor)
+    return;
+
+  const stage =
+    getStage();
+
+  const layout =
+  getDecorLayout();
+
+  const items = {
+
+  1: [
+    
+  ],
+
+  2: [
+    {
+      emoji: "🖼️",
+      spot: leftSpots[0]
+    }
+  ],
+
+  3: [
+    {
+      emoji: "🖼️",
+      spot: leftSpots[0]
+    },
+
+    {
+      emoji: "📖",
+      spot: rightSpots[0]
+    }
+  ],
+
+  4: [
+    {
+      emoji: "🖼️",
+      spot: leftSpots[0]
+    },
+
+    {
+      emoji: "📖",
+      spot: rightSpots[0]
+    },
+
+    {
+      emoji: "🪴",
+      spot: groundSpots[0]
+    }
+  ],
+
+  5: [
+    {
+      emoji: "🖼️",
+      spot: leftSpots[0]
+    },
+
+    {
+      emoji: "📖",
+      spot: rightSpots[0]
+    },
+
+    {
+      emoji: "🪴",
+      spot: groundSpots[0]
+    },
+
+    {
+      emoji: "🗂️",
+      spot: groundSpots[1]
+    }
+  
+  ]
+
+};
+
+  decor.innerHTML = "";
+
+items[stage].forEach(
+  (item, index) => {
+
+    const pos = item.spot;
+
+    decor.innerHTML += `
+      <span
+        class="decor-item"
+        style="
+          left:${pos.x}px;
+          top:${pos.y}px;
+        "
+      >
+        ${item.emoji}
+      </span>
+    `;
+
+  }
+);
+
+}
+
+function getDecorLayout() {
+
+  let layout =
+    JSON.parse(
+      localStorage.getItem(
+        "chauDecor"
+      )
+    );
+
+  if (layout)
+    return layout;
+
+  layout =
+    [...decorSpots]
+      .sort(
+        () =>
+          Math.random() - 0.5
+      );
+
+  localStorage.setItem(
+    "chauDecor",
+    JSON.stringify(layout)
+  );
+
+  return layout;
+
+}
+
+function updateGrass() {
+
+  const grass =
+    getEl("pet-grass");
+
+  if (!grass)
+    return;
+
+  const stage =
+    getStage();
+
+  const grassStates = {
+
+    1:
+      ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",
+
+    2:
+      ",',',',',',',',',',',',',',',',",
+
+    3:
+      "''',''',''',''',''',''',''','''",
+
+    4:
+      "''',''',''',''',''',''',''','''",
+
+    5:
+      "''''''''''''''''''''''''''''''''"
+
+  };
+
+  grass.textContent =
+    grassStates[stage];
+
+}
+
 function updatePet() {
 
   const sprite =
@@ -644,6 +837,8 @@ function updatePet() {
 }
   }
 
+  updateDecor();
+  updateGrass();
   updateXP();
 
 }
@@ -719,10 +914,10 @@ petX =
 
 petY =
   Math.max(
-    10,
+    40,
     Math.min(
       petY,
-      35
+      55
     )
   );
 
@@ -992,9 +1187,9 @@ setInterval(() => {
 
       const spots = [
 
-{ x: 70, y: 70 },
-{ x: 120, y: 73 },
-{ x: 170, y: 70 }
+{ x: 70, y: 122  },
+{ x: 120, y: 117 },
+{ x: 170, y: 122 }
 
 ];
       const spot =
