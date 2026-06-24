@@ -592,7 +592,7 @@ const rightSpots = [
 
 const groundSpots = [
 
-  { x: 40, y: 80 },
+  { x: 40, y: 90 },
   { x: 126, y: 90 },
   { x: 80, y: 82 }
 
